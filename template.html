@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><!-- 在这里写页面标题 --></title>
+<meta name="description" content="<!-- 在这里写页面描述 -->">
+<meta name="date" content="<!-- YYYY-MM-DD -->">
+<meta name="tags" content="<!-- 标签1, 标签2 -->">
+<style>
+:root {
+  --bg: #05070a; --bg2: #0b1020; --card: rgba(255,255,255,.04);
+  --border: rgba(255,255,255,.08); --txt: #e8ecf4; --sub: #8b98ad;
+  --cyan: #22d3ee; --violet: #a78bfa; --pink: #f472b6;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg); color: var(--txt);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  line-height: 1.7; overflow-x: hidden;
+}
+.glow {
+  position: fixed; border-radius: 50%; filter: blur(120px);
+  opacity: .16; pointer-events: none; z-index: 0;
+}
+.g1 { width: 460px; height: 460px; background: #0ea5e9; top: -120px; right: -120px; }
+.g2 { width: 380px; height: 380px; background: #7c3aed; bottom: -100px; left: -100px; }
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  backdrop-filter: blur(14px); background: rgba(5,7,10,.72);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 820px; margin: 0 auto; padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.back {
+  color: var(--sub); text-decoration: none; font-size: 14px;
+  display: inline-flex; align-items: center; gap: 6px; transition: .2s;
+}
+.back:hover { color: var(--cyan); }
+.brand { font-weight: 800; font-size: 14px; color: var(--txt); }
+main {
+  position: relative; z-index: 1;
+  max-width: 820px; margin: 0 auto; padding: 120px 24px 80px;
+}
+.page-header {
+  text-align: center; margin-bottom: 48px;
+}
+.page-header h1 {
+  font-size: clamp(30px, 5vw, 48px); font-weight: 900;
+  letter-spacing: -1px; margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lead {
+  color: var(--sub); font-size: 18px; max-width: 600px; margin: 0 auto;
+}
+.meta {
+  display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 24px;
+}
+.meta span {
+  font-size: 12px; color: var(--cyan);
+  background: rgba(34,211,238,.08); border: 1px solid rgba(34,211,238,.2);
+  padding: 4px 12px; border-radius: 99px;
+}
+.content {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 36px;
+}
+.content h2 {
+  font-size: 24px; font-weight: 700; margin: 32px 0 14px;
+  color: var(--txt);
+}
+.content h2:first-child { margin-top: 0; }
+.content p { color: var(--sub); margin-bottom: 16px; }
+.content ul { margin-left: 22px; color: var(--sub); }
+.content li { margin-bottom: 10px; }
+.code {
+  background: rgba(0,0,0,.25); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; font-family: Consolas, monospace;
+  font-size: 13px; color: var(--cyan); overflow-x: auto;
+}
+footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border); padding: 30px 24px;
+  text-align: center; color: var(--sub); font-size: 13px;
+}
+footer a { color: var(--cyan); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="back" href="index.html">← 返回首页</a>
+    <span class="brand">HTML Share</span>
+  </div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h1><!-- 在这里写主标题 --></h1>
+    <p class="lead"><!-- 在这里写导语/摘要 --></p>
+    <div class="meta">
+      <span><!-- 日期 --></span>
+      <span><!-- 标签 --></span>
+    </div>
+  </div>
+
+  <article class="content">
+    <!-- 在这里放主体内容 -->
+    <h2>章节标题</h2>
+    <p>正文段落……</p>
+  </article>
+</main>
+
+<footer>
+  HTML Share · 由 <a href="https://github.com/cypggs">cypggs</a> 维护
+</footer>
+</body>
+</html>
